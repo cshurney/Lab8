@@ -1,7 +1,7 @@
 var total = 0;
 
 var groceryList = [
-  { item: "cheerios",
+  { item: "trix",
     price: 3.00
   },
 
@@ -16,28 +16,31 @@ var groceryList = [
   {
   item: "fruit",
   price: 5.00
-  }
+},
+{
+  item: "soda pop",
+  price: 2.00
+}
 ];
 
 for(i=0; i<groceryList.length; i++){
 
   total+=groceryList[i].price;
-  console.log(groceryList[i].item+ " $" + groceryList[i].price);
+  console.log(groceryList[i].item+ ": $" + groceryList[i].price);
 
   var printedList = document.createElement("div"); // <a></a>
 
-  printedList.innerHTML = groceryList[i].item + "$" + groceryList[i].price;        //<a>Go</a>
+  printedList.innerHTML = groceryList[i].item + ": $" + groceryList[i].price;        //<a>Go</a>
 
   // printedList.setAttribute("href", "http://www.google.com");    // <a href = "google">Go</a>
 
   document.body.appendChild(printedList);       //add a page
 
-
 }
 
 var printedTotal = document.createElement('div');
 
-printedTotal.innerHTML = "Total: $ " + groceryList.total + total;
+printedTotal.innerHTML = "Total: $" + total;
 
 document.body.appendChild(printedTotal);
 
